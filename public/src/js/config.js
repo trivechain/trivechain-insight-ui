@@ -5,7 +5,7 @@ angular.module('insight').config(function($routeProvider) {
   $routeProvider.
     when('/block/:blockHash', {
       templateUrl: 'views/block.html',
-      title: 'Dash Block '
+      title: 'TRVC Block '
     }).
     when('/block-index/:blockHeight', {
       controller: 'BlocksController',
@@ -17,7 +17,7 @@ angular.module('insight').config(function($routeProvider) {
     }).
     when('/tx/:txId/:v_type?/:v_index?', {
       templateUrl: 'views/transaction.html',
-      title: 'Dash Transaction '
+      title: 'TRVC Transaction '
     }).
     when('/', {
       templateUrl: 'views/index.html',
@@ -25,15 +25,15 @@ angular.module('insight').config(function($routeProvider) {
     }).
     when('/blocks', {
       templateUrl: 'views/block_list.html',
-      title: 'Dash Blocks solved Today'
+      title: 'TRVC Blocks solved Today'
     }).
     when('/blocks-date/:blockDate/:startTimestamp?', {
       templateUrl: 'views/block_list.html',
-      title: 'Dash Blocks solved '
+      title: 'TRVC Blocks solved '
     }).
     when('/address/:addrStr', {
       templateUrl: 'views/address.html',
-      title: 'Dash Address '
+      title: 'TRVC Address '
     }).
     when('/status', {
       templateUrl: 'views/status.html',

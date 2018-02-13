@@ -35,7 +35,7 @@
         <div class="panel panel-default" data-ng-repeat="vin in tx.vinSimple| startFrom:currentInNoExpanded*sizeInNoExpanded | limitTo:sizeInNoExpanded">
           <div class="panel-body transaction-vin-vout">
             <div class="pull-right DASH-value" data-ng-class="{'text-danger': $root.currentAddr == vin.addr}">
-              {{$root.currency.getConvertion(vin.value) || vin.value + ' DASH'}}
+              {{$root.currency.getConvertion(vin.value) || vin.value + ' TRVC'}}
             </div>
             <div class="ellipsis">
               <span data-ng-show="vin.notAddr">{{vin.addr}}</span>
