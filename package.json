@@ -35,7 +35,7 @@
     "blockchain",
     "blockexplorer",
     "dash",
-    "bitcore-dash",
+    "bitcore-trvc",
     "front-end"
   ],
   "bitcoreNode": "bitcore-node-trvc",
