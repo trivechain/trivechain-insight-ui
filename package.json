@@ -1,8 +1,8 @@
 {
-  "name": "insight-ui-dash",
+  "name": "insight-ui-trvc",
   "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the Dash network and build your own services with it.",
   "version": "0.4.3",
-  "repository": "git://github.com/dashpay/insight-ui-dash.git",
+  "repository": "git://github.com/trivechain/insight-ui-trvc.git",
   "contributors": [
     {
       "name": "Matias Alejo Garcia",
@@ -26,9 +26,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/dashpay/insight-ui-dash/issues"
+    "url": "https://github.com/trivechain/insight-ui-trvc/issues"
   },
-  "homepage": "https://github.com/dashpay/insight-ui-dash",
+  "homepage": "https://github.com/trivechain/insight-ui-trvc",
   "license": "MIT",
   "keywords": [
     "insight",
@@ -38,7 +38,7 @@
     "bitcore-dash",
     "front-end"
   ],
-  "bitcoreNode": "bitcore-node-dash",
+  "bitcoreNode": "bitcore-node-trvc",
   "dependencies": {
   },
   "devDependencies": {
