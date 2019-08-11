@@ -1,6 +1,6 @@
-# Insight UI Dash
+# Insight UI Trivechain
 
-A Dash blockchain explorer web application service for [Bitcore Node Dash](https://github.com/trivechain/bitcore-node-trvc) using [Insight API Dash](https://github.com/trivechain/insight-api-trvc).
+A Trivechain blockchain explorer web application service for [Bitcore Node Trivechain](https://github.com/trivechain/bitcore-node-trvc) using [Insight API Trivechain](https://github.com/trivechain/insight-api-trvc).
 
 ## Quick Start
 
@@ -23,7 +23,7 @@ Open a web browser to `http://localhost:3001/insight/`
 
 ## Development
 
-To run Insight UI Dash locally in development mode:
+To run Insight UI Trivechain locally in development mode:
 
 Install bower dependencies:
 
@@ -45,7 +45,7 @@ $ grunt
 
 ## Multilanguage support
 
-Insight UI Dash uses [angular-gettext](http://angular-gettext.rocketeer.be) for multilanguage support.
+Insight UI Trivechain uses [angular-gettext](http://angular-gettext.rocketeer.be) for multilanguage support.
 
 To enable a text to be translated, add the ***translate*** directive to html tags. See more details [here](http://angular-gettext.rocketeer.be/dev-guide/annotate/). Then, run:
 
@@ -74,7 +74,7 @@ For more details about the [Insight API](https://github.com/trivechain/insight-a
 
 ## Contribute
 
-Contributions and suggestions are welcomed at the [Insight UI Dash GitHub repository](https://github.com/trivechain/insight-ui-trvc).
+Contributions and suggestions are welcomed at the [Insight UI Trivechain GitHub repository](https://github.com/trivechain/insight-ui-trvc).
 
 
 ## License
