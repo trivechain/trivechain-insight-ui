@@ -18,7 +18,7 @@ var InsightUI = function(options) {
   }
 };
 
-InsightUI.dependencies = ['trivechain/trivechain-insight-api'];
+InsightUI.dependencies = ['trivechain-insight-api'];
 
 inherits(InsightUI, BaseService);
 
