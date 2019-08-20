@@ -1,22 +1,22 @@
-# Insight UI Trivechain
+# Insight UI
 
-A Trivechain blockchain explorer web application service for [Bitcore Node Trivechain](https://github.com/trivechain/bitcore-node-trvc) using [Insight API Trivechain](https://github.com/trivechain/insight-api-trvc).
+A Trivechain blockchain explorer web application service for [Trivechaincore Node](https://github.com/trivechain/trivechaincore-node) using [Insight API](https://github.com/trivechain/trivechain-insight-api).
 
 ## Quick Start
 
-Please see the guide at [https://bitcore.io/guides/full-node](https://bitcore.io/guides/full-node) for information about getting a block explorer running. This is only the front-end component of the block explorer, and is packaged together with all of the necessary components in [Bitcore](https://github.com/trivechain/bitcore-trvc).
+Please see the guide at [https://bitcore.io/guides/full-node](https://bitcore.io/guides/full-node) for information about getting a block explorer running. This is only the front-end component of the block explorer, and is packaged together with all of the necessary components in [Trivechaincore](https://github.com/trivechain/trivechainCore).
 
 ## Getting Started
 
 To manually install all of the necessary components, you can run these commands:
 
 ```bash
-npm install -g bitcore-node-trvc
-bitcore-node-trvc create mynode
+npm install -g trivechain/trivechaincore-node
+trivechaincore-node create mynode
 cd mynode
-bitcore-node-trvc install insight-api-trvc
-bitcore-node-trvc install insight-ui-trvc
-bitcore-node-trvc start
+trivechaincore-node install trivechain/trivechain-insight-api
+trivechaincore-node install trivechain/trivechain-insight-ui
+trivechaincore-node start
 ```
 
 Open a web browser to `http://localhost:3001/insight/`
@@ -25,22 +25,22 @@ Open a web browser to `http://localhost:3001/insight/`
 
 To run Insight UI Trivechain locally in development mode:
 
-Install bower dependencies:
+Install dependencies:
 
 ```
-$ bower install
+$ npm install
 ```
 
-To compile and minify the web application's assets:
+To download bower dependencies, compile and minify the web application's assets:
 
 ```
-$ grunt compile
+$ npm run build
 ```
 
 There is a convenient Gruntfile.js for automation during editing the code
 
 ```
-$ grunt
+$ npm run watch
 ```
 
 ## Multilanguage support
@@ -50,7 +50,7 @@ Insight UI Trivechain uses [angular-gettext](http://angular-gettext.rocketeer.be
 To enable a text to be translated, add the ***translate*** directive to html tags. See more details [here](http://angular-gettext.rocketeer.be/dev-guide/annotate/). Then, run:
 
 ```
-grunt compile
+npm run build
 ```
 
 This action will create a template.pot file in ***po/*** folder. You can open it with some PO editor ([Poedit](http://poedit.net)). Read this [guide](http://angular-gettext.rocketeer.be/dev-guide/translate/) to learn how to edit/update/import PO files from a generated POT file. PO file will be generated inside po/ folder.
@@ -70,11 +70,11 @@ compile***.
 
 ## Note
 
-For more details about the [Insight API](https://github.com/trivechain/insight-api-trvc) configuration and end-points, go to [Insight API GitHub repository](https://github.com/trivechain/insight-api-trvc).
+For more details about the [Insight API](https://github.com/trivechain/trivechain-insight-api) configuration and end-points, go to [Insight API GitHub repository](https://github.com/trivechain/trivechain-insight-api).
 
 ## Contribute
 
-Contributions and suggestions are welcomed at the [Insight UI Trivechain GitHub repository](https://github.com/trivechain/insight-ui-trvc).
+Contributions and suggestions are welcomed at the [Insight UI Trivechain GitHub repository](https://github.com/trivechain/trivechain-insight-ui).
 
 
 ## License

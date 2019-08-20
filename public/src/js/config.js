@@ -5,7 +5,7 @@ angular.module('insight').config(function($routeProvider) {
   $routeProvider.
     when('/block/:blockHash', {
       templateUrl: 'views/block.html',
-      title: 'TRVC Block '
+      title: 'Trivechain Block '
     }).
     when('/block-index/:blockHeight', {
       controller: 'BlocksController',
@@ -17,7 +17,7 @@ angular.module('insight').config(function($routeProvider) {
     }).
     when('/tx/:txId/:v_type?/:v_index?', {
       templateUrl: 'views/transaction.html',
-      title: 'TRVC Transaction '
+      title: 'Trivechain Transaction '
     }).
     when('/', {
       templateUrl: 'views/index.html',
@@ -25,11 +25,11 @@ angular.module('insight').config(function($routeProvider) {
     }).
     when('/blocks', {
       templateUrl: 'views/block_list.html',
-      title: 'TRVC Blocks solved Today'
+      title: 'Trivechain Blocks solved Today'
     }).
     when('/blocks-date/:blockDate/:startTimestamp?', {
       templateUrl: 'views/block_list.html',
-      title: 'TRVC Blocks solved '
+      title: 'Trivechain Blocks solved '
     }).
     when('/address/:addrStr', {
       templateUrl: 'views/address.html',
@@ -55,7 +55,8 @@ angular.module('insight')
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
   })
-  .run(function($rootScope, $route, $location, $routeParams, $anchorScroll, ngProgress, gettextCatalog, amMoment) {
+  .run(function($rootScope, $route, $location, $routeParams, $anchorScroll, ngProgressFactory, gettextCatalog, amMoment) {
+    var ngProgress = ngProgressFactory.createInstance();
     gettextCatalog.currentLanguage = defaultLanguage;
     amMoment.changeLocale(defaultLanguage);
     $rootScope.$on('$routeChangeStart', function() {
@@ -68,7 +69,6 @@ angular.module('insight')
       //Change page title, based on Route information
       $rootScope.titleDetail = '';
       $rootScope.title = $route.current.title;
-      $rootScope.isCollapsed = true;
       $rootScope.currentAddr = null;
 
       $location.hash($routeParams.scrollTo);

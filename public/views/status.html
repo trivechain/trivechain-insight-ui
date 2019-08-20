@@ -13,11 +13,11 @@
             <td translate>Sync Progress</td>
             <td>
               <div class="progress">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ sync.syncPercentage}}%">
+                <uib-progressbar class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ sync.syncPercentage}}%">
                   <span data-ng-show="sync.syncPercentage>0">{{sync.syncPercentage}}%
                     <span translate>Complete</span>
                   </span>
-                </div>
+                </uib-progressbar>
               </div>
             </td>
           </tr>
@@ -76,7 +76,7 @@
     </div> <!-- END OF COL-8 -->
 
     <div class="col-xs-12 col-md-4 col-gray">
-      <h2 translate>TRVC node information</h2>
+      <h2 translate>Trivechain node information</h2>
       <table class="table" data-ng-controller="StatusController" data-ng-init="getStatus('Info')">
         <thead  data-ng-include src="'views/includes/infoStatus.html'"></thead>
         <tbody>

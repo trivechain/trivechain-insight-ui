@@ -31,9 +31,14 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
 
       // non standard output
       if (items[i].scriptPubKey && !items[i].scriptPubKey.addresses) {
-        items[i].scriptPubKey.addresses = ['Unparsed address [' + u++ + ']'];
-        items[i].notAddr = true;
-        notAddr = true;
+        if ("6a" == items[i].scriptPubKey.hex.substring(0,2)) {
+          var message = _hex_to_ascii(items[i].scriptPubKey.hex.substring(4));
+          items[i].scriptPubKey.addresses = ['OPEN DATA: ' +  message];
+        } else {
+          items[i].scriptPubKey.addresses = ['Unparsed address [' + u++ + ']'];
+          items[i].notAddr = true;
+          notAddr = true;
+        }
       }
 
       // multiple addr at output
@@ -73,6 +78,11 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
     });
     return ret;
   };
+
+  var _hex_to_ascii = function(r) {
+    for(var t=r.toString(),n="",o=0;o<t.length;o+=2)n+=String.fromCharCode(parseInt(t.substr(o,2),16));
+    return n
+  } 
 
   var _processTX = function(tx) {
     tx.vinSimple = _aggregateItems(tx.vin);

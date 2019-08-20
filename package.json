@@ -1,8 +1,8 @@
 {
-  "name": "insight-ui-trvc",
+  "name": "trivechain-insight-ui",
   "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the Trivechain network and build your own services with it.",
-  "version": "0.4.3",
-  "repository": "git://github.com/trivechain/insight-ui-trvc.git",
+  "version": "2.0.10",
+  "repository": "git://github.com/trivechain/trivechain-insight-ui.git",
   "contributors": [
     {
       "name": "Matias Alejo Garcia",
@@ -23,35 +23,58 @@
     {
       "name": "Juan Ignacio Sosa Lopez",
       "email": "bechilandia@gmail.com"
+    },
+    {
+      "name": "Anton Suprunchuk",
+      "email": "antouhou@gmail.com"
+    },
+    {
+      "name": "Tan Ji Sheng",
+      "email": "js@trive.academy"
     }
   ],
   "bugs": {
-    "url": "https://github.com/trivechain/insight-ui-trvc/issues"
+    "url": "https://github.com/trivechain/trivechain-insight-ui/issues"
   },
-  "homepage": "https://github.com/trivechain/insight-ui-trvc",
+  "homepage": "https://github.com/trivechain/trivechain-insight-ui",
   "license": "MIT",
   "keywords": [
     "insight",
     "blockchain",
     "blockexplorer",
-    "dash",
-    "bitcore-trvc",
-    "front-end"
+    "trivechain",
+    "trivechaincore-node",
+    "front-end",
+    "trivechaincore"
   ],
-  "bitcoreNode": "bitcore-node-trvc",
-  "dependencies": {
+  "trivechaincoreNode": "trivechaincore-node",
+  "scripts": {
+    "build": "bower install && grunt compile",
+    "watch": "grunt",
+    "lint": "eslint .",
+    "install-and-build": "npm install && npm run build",
+    "test": "webdriver-manager update && (webdriver-manager start > webdriver.log 2>&1 &) && sleep 30 && protractor ./test/e2e/conf.js",
+    "prepublishOnly": "npm run build"
   },
+  "dependencies": {},
   "devDependencies": {
-    "bower": "~1.2.8",
-    "grunt": "~0.4.2",
-    "grunt-cli": "~0.1.11",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.3.2",
-    "grunt-contrib-watch": "*",
-    "grunt-macreload": "*",
+    "bower": "~1.8.8",
+    "chai": "^4.2.0",
+    "dp-services-ctl": "github:trivechain/js-dp-services-ctl",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.13.0",
+    "grunt": "^1.0.4",
+    "grunt-angular-gettext": "^2.5.0",
+    "grunt-cli": "~1.3.2",
+    "grunt-contrib-concat": "~1.0.1",
+    "grunt-contrib-jshint": "~2.0.0",
+    "grunt-contrib-uglify": "~4.0.0",
+    "grunt-contrib-watch": "~1.1.0",
     "grunt-css": "~0.5.4",
-    "grunt-markdown": "~0.5.0",
-    "grunt-angular-gettext": "^0.2.15"
+    "grunt-macreload": "*",
+    "grunt-markdown": "~0.7.0",
+    "mocha": "^6.1.3",
+    "protractor": "5.4.2"
   }
 }
