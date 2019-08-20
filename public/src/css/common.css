@@ -122,7 +122,7 @@ margin-left: 0;
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: #cfe3f4;
+  color: #101010;
   font-family: 'Montserrat', sans-serif;
   padding-left: 20px;
   padding-right: 20px;
@@ -167,7 +167,7 @@ margin-left: 0;
 }
 
 .navbar-form .form-control {
-  background-color: #fbbc05;
+  background-color: #f9e17c;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -199,17 +199,19 @@ margin-left: 0;
   margin-left: 5px;
 }
 
-#search { color: #fff; }
+#search { color: #101010; }
+
+#search::placeholder { color: #2e2e2e; }
 
 #search::-webkit-input-placeholder {
-  color: #CFE3F4;
+  color: #2e2e2e;
   font-family: 'Montserrat', sans-serif;
   font-style: italic;
   font-weight: 100;
 }
 
 #search::-moz-placeholder {
-  color: #CFE3F4;
+  color: #2e2e2e;
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
 }
@@ -217,12 +219,12 @@ margin-left: 0;
 .status {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  background-color: #ffffff12;
+  background-color: #f9e17c;;
   border-radius: 3px;
   margin: 15px 0;
   padding: 8px 10px;
   font-size: 12px;
-  color: #eee;
+  color: #101010;
   text-align: center;
   margin-right: 10px;
 }
@@ -270,7 +272,7 @@ margin-left: 0;
 }
 
 .block-id {
-  background-color: #fbbc05;
+  background-color: #337ab7;
   border: 3px solid #FFFFFF;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -320,10 +322,6 @@ margin-left: 0;
 
 .btn {
   border-radius: 2px;
-}
-.btn-primary {
-  background-color: #fbbc05;
-  border: 2px solid #ffffff;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active,
@@ -815,7 +813,8 @@ a.v_highlight_more {
   .navbar {
     min-height: 50px;
   }
-  #search { color: #000; }
+  #search { color: #101010; }
+  #search::placeholder { color: #2e2e2e; }
   .txvalues {
     display: block;
     margin: 5px;
@@ -868,7 +867,7 @@ a.v_highlight_more {
 
 /* Trivechain rebrand, 2018-05-28 */
 a {
-  color: #fbbc05;
+  color: #428bca;
 }
 
 .btn-info {
@@ -909,6 +908,6 @@ fieldset[disabled] .btn-info:hover {
 }
 
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:active {
-    color: #cfe3f4;
+    color: #333;
     background-color: transparent;
 }
