@@ -272,12 +272,12 @@ margin-left: 0;
 }
 
 .block-id {
-  background-color: #337ab7;
+  background-color: #fbbc05;
   border: 3px solid #FFFFFF;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 20px auto;
   width: 165px;
   color: #fff;
   text-align: center;
@@ -322,6 +322,12 @@ margin-left: 0;
 
 .btn {
   border-radius: 2px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #fbbc05;
+  border-color: #fff
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active,
@@ -676,7 +682,7 @@ margin-left: 0;
 }
 
 a.v_highlight_more {
-  background-color: #cfe3f4;
+  background-color: #212121;
   color: #333;
 }
 
