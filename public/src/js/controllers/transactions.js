@@ -32,8 +32,16 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
       // non standard output
       if (items[i].scriptPubKey && !items[i].scriptPubKey.addresses) {
         if ("6a" == items[i].scriptPubKey.hex.substring(0,2)) {
-          var message = _hex_to_ascii(items[i].scriptPubKey.hex.substring(4));
-          items[i].scriptPubKey.addresses = ['OPEN DATA: ' +  message];
+          if ("544103" == items[i].scriptPubKey.hex.substring(4, 10)) {
+            items[i].scriptPubKey.addresses = ['TRIVEASSET TRANSACTION'];
+            items[i].notAddr = true;
+            notAddr = true;
+          } else {
+            var message = _hex_to_ascii(items[i].scriptPubKey.hex.substring(4));
+            items[i].scriptPubKey.addresses = ['OPEN DATA: ' +  message];
+            items[i].notAddr = true;
+            notAddr = true;
+          }
         } else {
           items[i].scriptPubKey.addresses = ['Unparsed address [' + u++ + ']'];
           items[i].notAddr = true;
